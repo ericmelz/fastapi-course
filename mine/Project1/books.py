@@ -10,6 +10,7 @@ BOOKS = [
     {'title': 'Title Five', 'author': 'Author Five', 'category': "math"},
 ]
 
+
 @app.get('/api-endpoint')
 async def first_api():
     return {'message': 'Hello Eric!'}
