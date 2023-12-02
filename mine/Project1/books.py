@@ -71,3 +71,11 @@ async def delete_book(book_title: str):
         if BOOKS[i].get('title').casefold() == book_title.casefold():
             BOOKS.pop(i)
             break
+
+
+@app.get('/books/authors/{author}')
+async def get_book_by_author(author):
+    for book in BOOKS:
+        if book.get('author').casefold() == author.casefold():
+            return book
+    return "Not Found"
